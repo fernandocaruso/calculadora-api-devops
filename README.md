@@ -13,3 +13,7 @@ npm start
 /calculadora/subtrair?a=10&b=5  
 /calculadora/multiplicar?a=10&b=5  
 /calculadora/dividir?a=10&b=5
+
+## Tecnologias
+Node.js
+Express
