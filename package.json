@@ -1,0 +1,24 @@
+{
+  "name": "calculadora-api-devops",
+  "version": "1.0.0",
+  "description": "Atividade Formativa e Somativa da PUC-PR / FernandoCaruso",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandocaruso/calculadora-api-devops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fernandocaruso/calculadora-api-devops/issues"
+  },
+  "homepage": "https://github.com/fernandocaruso/calculadora-api-devops#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
