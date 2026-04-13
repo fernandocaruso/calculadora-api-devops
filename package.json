@@ -4,7 +4,8 @@
   "description": "Atividade Formativa e Somativa da PUC-PR / FernandoCaruso",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/fernandocaruso/calculadora-api-devops#readme",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0"
   }
 }

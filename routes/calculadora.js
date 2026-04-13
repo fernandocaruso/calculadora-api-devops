@@ -1,33 +1,35 @@
 const express = require('express');
 const router = express.Router();
+const calculadoraService = require('../services/calculadoraService');
 
 router.get('/somar', (req, res) => {
   const a = Number(req.query.a);
   const b = Number(req.query.b);
-  res.json({ resultado: a + b });
+  res.json({ resultado: calculadoraService.somar(a, b) });
 });
 
 router.get('/subtrair', (req, res) => {
   const a = Number(req.query.a);
   const b = Number(req.query.b);
-  res.json({ resultado: a - b });
+  res.json({ resultado: calculadoraService.subtrair(a, b) });
 });
 
 router.get('/multiplicar', (req, res) => {
   const a = Number(req.query.a);
   const b = Number(req.query.b);
-  res.json({ resultado: a * b });
+  res.json({ resultado: calculadoraService.multiplicar(a, b) });
 });
 
 router.get('/dividir', (req, res) => {
   const a = Number(req.query.a);
   const b = Number(req.query.b);
 
-  if (b === 0) {
-    return res.status(400).json({ erro: 'Divisão por zero não é permitida' });
+  try {
+    const resultado = calculadoraService.dividir(a, b);
+    res.json({ resultado });
+  } catch (error) {
+    res.status(400).json({ erro: error.message });
   }
-
-  res.json({ resultado: a / b });
 });
 
 module.exports = router;
